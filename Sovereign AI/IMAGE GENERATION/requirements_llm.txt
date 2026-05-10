@@ -1,0 +1,39 @@
+# Advanced LLM Image Generation Requirements
+# Core ML/AI Libraries
+torch==2.1.0
+torchvision==0.16.0
+diffusers==0.24.0
+transformers==4.36.0
+accelerate==0.25.0
+clip-by-openai==1.0
+
+# Image Processing
+Pillow==10.0.1
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+scikit-image==0.22.0
+matplotlib==3.7.2
+
+# Numerical Computing
+numpy==1.24.3
+scipy==1.11.4
+
+# Web Interface
+streamlit==1.29.0
+plotly==5.17.0
+
+# Utilities
+requests==2.31.0
+tqdm==4.66.1
+omegaconf==2.3.0
+safetensors==0.4.0
+huggingface-hub==0.19.4
+
+# Optional: For enhanced performance
+# xformers==0.0.22  # Uncomment if you have compatible GPU
+# bitsandbytes==0.41.3  # For quantization support
+
+# Development and Testing
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0

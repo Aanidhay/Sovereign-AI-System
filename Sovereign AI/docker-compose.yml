@@ -1,0 +1,25 @@
+version: '3.8'
+
+networks:
+  sovereign_network:
+    name: sovereign_network
+
+services:
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: sovereign-tunnel
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TOKEN}
+    networks:
+      - sovereign_network
+
+  sovereign-master:
+    build: .
+    container_name: sovereign-master
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - sovereign_network

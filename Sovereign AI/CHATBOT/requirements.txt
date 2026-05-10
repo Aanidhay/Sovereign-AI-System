@@ -1,0 +1,11 @@
+streamlit
+requests
+PyPDF2
+python-docx
+pandas
+openpyxl
+python-pptx
+lxml
+sentence-transformers
+faiss-cpu
+numpy
